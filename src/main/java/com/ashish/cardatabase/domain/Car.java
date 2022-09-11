@@ -1,5 +1,6 @@
 package com.ashish.cardatabase.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,6 +12,9 @@ public class Car {
     @Id
     @GeneratedValue(strategy = javax.persistence.GenerationType.AUTO)
     private Long id;
+
+    @Column(name = "explaination", length = 256, nullable = false)
+    private String description;
 
     public Car() {
     }
