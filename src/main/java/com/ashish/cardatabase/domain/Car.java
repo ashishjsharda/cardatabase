@@ -1,12 +1,15 @@
 package com.ashish.cardatabase.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Car {
     private String brand, model, color, registerNumber;
     private int year, price;
+    @Id
+    @GeneratedValue(strategy = javax.persistence.GenerationType.AUTO)
     private Long id;
 
     public Car() {
